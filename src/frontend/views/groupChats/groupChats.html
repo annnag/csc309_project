@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Hachi | GroupChats</title>
+    <link rel="stylesheet" type="text/css" href="groupChats.css">
+    <link rel="stylesheet" type="text/css" href="../../global.css">
+    <!-- <link rel="stylesheet" href="../dashboard/dashboard.css"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://js.pusher.com/5.1/pusher.min.js"></script>
+</head>
+
+<body>
+    <nav id="sidebar">
+        <ul class="list-unstyled">
+            <li class="nav-block" id="topElement">
+                <a href="../dashboard/dashboard.html">
+                    <img src="../dashboard/dashboard_icons/home.svg" class="nav-icon">
+                    <span class="tooltiptext">Dashboard</span>
+                  </a>
+            </li>
+            <li class="nav-block">
+                <a href="../tasks/tasks.html">
+                  <img src="../dashboard/dashboard_icons/check-marks.svg" class="nav-icon dashboard">
+                  <span class="tooltiptext">Upcoming projects!</span>
+              </a>
+            </li>
+            <li class="nav-block">
+                <a href="../courses/courses.html">
+                  <img src="../dashboard/dashboard_icons/book.svg" class="nav-icon">
+                  <span class="tooltiptext">Estimate your grades!</span>
+              </a>
+            </li>
+            <li class="nav-block  nav-selected">
+                <a href="../groupChats/groupChats.html">
+                  <img src="../dashboard/dashboard_icons/comment.svg" class="nav-icon">
+                  <span class="tooltiptext">Talk with your classmate!</span>
+              </a>
+            </li>
+            <li class="nav-block">
+                <a href="../setting/setting.html"><img src="../dashboard/dashboard_icons/settings.svg" class="nav-icon"></a>
+            </li>
+        </ul>
+    </nav>
+    <div id='emptyDiv'></div>
+    <div id='groupChats'>
+        <div id='groupChatsTitle'>
+            <h1>Chats</h1>
+        </div>
+        <div id='groupChatsList'>
+            <!-- <div class='groupChat'>
+                <h2>CSC309</h2>
+            </div>
+            <div class='groupChat'>
+                <h2>CSC373</h2>
+            </div>
+            <div class='groupChat'>
+                <h2>STA248</h2>
+            </div> -->
+        </div>
+    </div>
+    <div id="chatWindow">
+        <!-- <div id="courseNameContainer">
+            <h3>CSC309</h3>
+        </div>
+        <div id="msgsContainer">
+            <div class="msg">
+                <div class='user'> 
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/><path d="M0 0h24v24H0z" fill="none"/></svg> 
+                    <p>username</p>
+                </div>  
+                <div class='msgContent'>
+                    <p class='msgText'>lerhfj sd slkd jfs sfd f</p>
+                </div> 
+            </div>
+            <div class='msg'>
+                <div class='userMe'> 
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/><path d="M0 0h24v24H0z" fill="none"/></svg>                  
+                    <p>Anna</p>
+                </div>  
+                <div class='myMsgContent'>
+                    <p class='msgText'>msg smsg sg jsd </p>
+                </div> 
+            </div> 
+            <div class="msg">
+                <div class='user'> 
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/><path d="M0 0h24v24H0z" fill="none"/></svg> 
+                    <p>username</p>
+                </div>  
+                <div class='msgContent'>
+                    <p class='msgText'>lerhfj sd slkd jfs sfd f</p>
+                </div> 
+            </div>
+           
+        </div>
+        <div id="sendContainer">
+            <form>
+                <input type="text" id="msgInput" />
+                <button type="button" id="sendButton">Send</button>
+            </form>
+        </div> -->
+
+    </div>
+
+
+    <script type="text/javascript" src="groupChats.js"></script>
+
+</body>
+
+</html>

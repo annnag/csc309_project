@@ -1,0 +1,257 @@
+.main-wrapper {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.card-title {
+    padding: 1em 2em .5em 2em;
+    margin-bottom: 0;
+}
+
+.page-content {
+    flex-basis: 96%;
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.page-title {
+    margin-left: 40px;
+    margin-top: 20px;
+}
+
+.content-box {
+    margin-left: 40px;
+    margin-top: 20px;
+    margin-right: 40px;
+    min-height: 150px;
+}
+
+#contentCalendar {
+    flex-basis: 64%;
+}
+
+.calendar-options {
+    margin: 1em 2em 1em 2em;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#calTitle {
+    margin-right: 5%;
+    margin-bottom: 0px;
+}
+
+.calendar-button {
+    border: none;
+    background: none;
+    margin: 0;
+}
+
+.selected-button {
+    border-radius: 5px;
+    background: rgb(255, 197, 0);
+}
+
+h5 {
+    color: #ffffff;
+}
+
+#calendarBox {
+    padding: 20px 10px 40px 20px;
+    margin: 20px 20px 20px 20px;
+    overflow-y: scroll;
+    max-height: 480px;
+    flex-basis: 70%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#calendarBox:after {
+    content: "";
+    height: 20px;
+    flex-basis: 100%;
+    flex-shrink: 0;
+}
+
+.calendar-row {
+    flex-basis: 100%;
+    flex-shrink: 0;
+    height: 60px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex: row;
+}
+
+.time-stamp {
+    flex-basis: 2%;
+    padding: 0px 10px 10px 5px;
+    color: #999999;
+}
+
+.time-space {
+    flex-basis: 95%;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: #C0C0C0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#calDisplay {
+    display: flex;
+    flex-direction: row;
+}
+
+#calEventDisplay {
+    flex-basis: 30%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin-left: 1em;
+}
+
+.cal-event {
+    flex-basis: 100%;
+    max-height: 100%;
+    flex-flow: fill;
+    border-radius: 5px;
+    margin: 0px 5px 0px 5px;
+    padding-top: 10px;
+    padding-left: 5px;
+    overflow: hidden;
+    min-height: 100%;
+    cursor: pointer;
+}
+
+.week-cal-event {
+    padding: 2% 1% 1% 1%;
+}
+
+#noEventAlert {
+    text-align: center;
+    margin-top: 50%;
+}
+
+.cal-event-info {
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+    justify-content: center;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 20%;
+}
+
+.due-date {
+    min-height: 10vh;
+}
+
+.calendar-column-label {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    flex-basis: 2%;
+    min-height: 800px;
+}
+
+.calendar-column-day {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    flex-basis: 13.5%;
+    text-align: center;
+    border-left: 1px solid #C0C0C0;
+}
+
+.day-time-block {
+    min-width: 100%;
+    flex-basis: 5%;
+    border-radius: 5px;
+    max-height: 100%;
+}
+
+.time-label-block {
+    flex-basis: 5%;
+    min-width: 100%;
+}
+
+.day-label {
+    margin-bottom: 0px;
+    flex-basis: 5%;
+    border-bottom: 1px solid #C0C0C0;
+}
+
+.week-time-label {
+    flex-basis: 5%;
+    padding: 0px 10px 0px 5px;
+    color: #999999;
+}
+
+.month-day-labels {
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: row;
+    min-height: 20px;
+}
+
+.month-day-indv-label {
+    flex-basis: 14.2%;
+    text-align: center
+}
+
+.month-day-slots {
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.month-day-indv-slot {
+    flex-basis: 14.2%;
+    text-align: right;
+    min-height: 70px;
+    padding-left: 1.25em;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.week-day-text {
+    font-size: .75em;
+    margin: 0;
+    text-align: center;
+}
+
+.month-event {
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+    background-color: rgb(255, 192, 0);
+}
+
+#placeHolder {
+    border-bottom: 1px solid #C0C0C0;
+}
+
+#notifications {
+    padding: 0em 2em .5em 2em;
+}
+
+#logOut {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    border-radius: 20px;
+    font-size: 20px;
+    padding: 15px;
+    background-color: #ffce1c;
+    color: black;
+}

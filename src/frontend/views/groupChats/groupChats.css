@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    /* line-height: 1.4; */
+    display: flex;
+}
+
+li {
+    list-style: none;
+}
+
+#groupChats {
+    flex: 5;
+}
+
+#chatWindow {
+    flex: 12;
+}
+
+
+/* hold space for nav bar */
+
+#emptyDiv {
+    width: 60px;
+}
+
+#groupChatsTitle {
+    height: 5vh;
+    background-color: white;
+    text-align: center;
+    margin-top: 3vh;
+}
+
+#groupChatsList {
+    height: 92vh;
+    overflow-y: scroll;
+}
+
+.groupChat {
+    /* border: 1px solid black; */
+    padding-bottom: 20px;
+    height: 100px;
+}
+
+.groupChat:hover {
+    background-color: ghostwhite;
+}
+
+.groupChat h2 {
+    text-align: center;
+    padding-top: 5%;
+}
+
+.courseNameContainer {
+    background-color: rgba(59, 72, 74, 1);
+    height: 5vh;
+}
+
+.courseNameContainer h3 {
+    color: rgba(255, 206, 28, 1);
+    padding: 10px;
+    text-align: center;
+    font-size: 2em;
+}
+
+#chatWindow {
+    background-color: ghostwhite;
+}
+
+#msgsContainer {
+    height: 89vh;
+    overflow-y: scroll;
+}
+
+.msg {
+    margin: 10px;
+    padding: 5px;
+}
+
+.msg svg {
+    width: 50px;
+    height: 50px;
+}
+
+.msgText {
+    font-size: 1.5em;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid rgba(255, 206, 28, 1);
+    border-radius: 10px;
+    margin: 10px;
+    display: inline-block;
+}
+
+.msgContent {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.myMsgContent {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.user {
+    float: left;
+}
+
+.userMe {
+    float: right;
+}
+
+.user p {
+    text-align: center;
+    margin: 0;
+}
+
+.userMe p {
+    text-align: center;
+    margin: 0;
+}
+
+#sendContainer form {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    width: 66.6%;
+}
+
+#msgInput {
+    font-size: 2em;
+    flex: 8;
+    /* height: 5vh; */
+}
+
+#sendButton {
+    flex: 2;
+    background-color: rgba(255, 206, 28, 1);
+    font-size: 2em;
+    text-align: center;
+    padding-top: 15px;
+    cursor: pointer;
+}
+
+#sendButton:hover {
+    background-color: honeydew;
+}
+
+.report-btn {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(139, 0, 0, 0.13);
+    cursor: pointer;
+}
+
+.report-btn:hover {
+    background-color: rgba(139, 0, 0, 0.4);
+}
+
+.report-btn:hover {
+    background-color: rgba(139, 0, 0, 0.4);
+}
+
+.chat-style {
+    margin-top: 1em;
+}
